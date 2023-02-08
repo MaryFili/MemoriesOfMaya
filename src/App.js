@@ -1,14 +1,14 @@
-import './App.css';
-import Navbar from './Navbar';
-import Home from './Home';
+import styles from './App.module.css'
+import Navbar from './components/Navbar';
+import Home from './components/Home';
 
 function App() {
   const title = 'A blog tribute to an amazing friend';
 
   return (
-    <div className="App">
+    <div className={styles.App}>
       <Navbar />
-      <div className="content">
+      <div className={styles.content}>
         <Home />
       </div>
 

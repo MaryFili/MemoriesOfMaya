@@ -6,10 +6,7 @@
 
 .content {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-}
-
-.App {
-    text-align: center;
+    width: 100vw
 }

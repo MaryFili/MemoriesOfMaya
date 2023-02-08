@@ -3,6 +3,21 @@
 body {
   margin: 0;
   font-family: Quicksand;
-  background-color: #0f0949;
+  background-color: hsl(246, 78%, 6%);
   color: #FDF6FF
+}
+
+h1 {
+  color: #cdc2e2;
+  font-size: 2.7em;
+}
+
+h2 {
+  font-size: 2.2em;
+}
+
+p {
+  width: 90%;
+  padding: .6em;
+  font-size: 1.2em;
 }
