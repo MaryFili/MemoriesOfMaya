@@ -1,24 +1,19 @@
 import styles from './Home.module.css'
 import { useState, useEffect } from 'react'
 import BlogList from './BlogList';
+import useFetch from './useFetch';
 
 
 const Home = () => {
-    const [blogs, setBlogs] = useState(null)
+    const { resources: blogs, isPending, error } = useFetch(' http://localhost:8000/blogs')
 
 
-    useEffect(() => {
-        fetch("http://localhost:8000/blogs")
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-                setBlogs(data)
-            })
-    }, [])
 
 
     return (
         <div className={styles.home}>
+            {isPending && <p>Loading...</p>}
+            {error && <p>{error}</p>}
             {blogs && <BlogList blogs={blogs} />}
 
         </div>
