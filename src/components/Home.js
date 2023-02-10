@@ -1,21 +1,25 @@
 import styles from './Home.module.css'
-
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import BlogList from './BlogList';
 
+
 const Home = () => {
-    const [blogs, setBlogs] = useState([
-        { title: "What's the idea behind this?", body: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit quidem voluptates sunt expedita. Quasi dolorem ex ipsam ea culpa voluptatibus recusandae voluptas enim facere! Sapiente harum alias magnam nulla cumque aperiam in adipisci eveniet dolore modi! Magni, explicabo veniam sint inventore repellendus facilis ducimus dolores necessitatibus id perferendis, obcaecati consectetur!", author: "mary", id: 1 },
-        { title: "Who am i?", body: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit quidem voluptates sunt expedita. Quasi dolorem ex ipsam ea culpa voluptatibus recusandae voluptas enim facere! Sapiente harum alias magnam nulla cumque aperiam in adipisci eveniet dolore modi! Magni, explicabo veniam sint inventore repellendus facilis ducimus dolores necessitatibus id perferendis, obcaecati consectetur!", author: "mary", id: 2 },
-        { title: "What else could i say?", body: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit quidem voluptates sunt expedita. Quasi dolorem ex ipsam ea culpa voluptatibus recusandae voluptas enim facere! Sapiente harum alias magnam nulla cumque aperiam in adipisci eveniet dolore modi! Magni, explicabo veniam sint inventore repellendus facilis ducimus dolores necessitatibus id perferendis, obcaecati consectetur!", author: "mary", id: 3 },
-    ])
+    const [blogs, setBlogs] = useState(null)
 
 
+    useEffect(() => {
+        fetch("http://localhost:8000/blogs")
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                setBlogs(data)
+            })
+    }, [])
 
 
     return (
         <div className={styles.home}>
-            <BlogList blogs={blogs} />
+            {blogs && <BlogList blogs={blogs} />}
 
         </div>
     );
