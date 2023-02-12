@@ -1,41 +1,18 @@
-
-import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  Route,
-  RouterProvider,
-} from "react-router-dom";
-
-import styles from './App.module.css';
-
-//pages
+import styles from './App.module.css'
 import Navbar from './components/Navbar';
 import Home from './components/Home';
-import Create from "./components/Create";
-
-//layout
-import RootLayout from './Layout/RootLayout'
-
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path="/" element={<RootLayout />}>
-      <Route index element={<Home />} />
-      <Route path="create" element={<Create />} />
-
-    </Route>
-  )
-);
-
-
 
 function App() {
-  // const title = 'A blog tribute to an amazing friend';
+  const title = 'A blog tribute to an amazing friend';
 
   return (
+    <div className={styles.App}>
+      <Navbar />
+      <div className={styles.content}>
+        <Home />
+      </div>
 
-    <RouterProvider router={router} />
-
-
+    </div>
   );
 }
 
