@@ -11,11 +11,19 @@ const Home = () => {
 
 
     return (
+
+        <div className={styles.content}>
+            <div className={styles.home}>
+                {blogs && <BlogList blogs={blogs} />}
+
         <div className={styles.home}>
             {isPending && <p>Loading...</p>}
             {error && <p>{error}</p>}
             {blogs && <BlogList blogs={blogs} />}
 
+
+            </div>
+        </div>
         </div>
     );
 }
