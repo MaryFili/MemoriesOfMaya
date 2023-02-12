@@ -18,9 +18,11 @@ const Home = () => {
 
 
     return (
-        <div className={styles.home}>
-            {blogs && <BlogList blogs={blogs} />}
+        <div className={styles.content}>
+            <div className={styles.home}>
+                {blogs && <BlogList blogs={blogs} />}
 
+            </div>
         </div>
     );
 }
