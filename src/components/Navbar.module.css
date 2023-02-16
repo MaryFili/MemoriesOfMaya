@@ -27,11 +27,11 @@
 
 a {
     text-decoration: none;
-    padding: 2em;
+    padding: 1em;
     margin-left: 16px;
     color: #FFFADE;
-    font-size: 1.5rem;
-    letter-spacing: .2ch;
+    font-size: 1.3rem;
+    letter-spacing: .1ch;
 }
 
 a:hover {

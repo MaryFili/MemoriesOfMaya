@@ -8,6 +8,7 @@ const Navbar = () => {
                 <h1>Memories of Maya</h1>
                 <div className={styles.links}>
                     <a href="/">Home</a>
+                    <a className={styles.about} href="/about">About</a>
                     <a className={styles.createPost} href="/create">New Post</a>
                 </div>
 

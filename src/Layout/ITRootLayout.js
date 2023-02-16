@@ -15,7 +15,7 @@ export default function RootLayout() {
                         <div className={styles.links}>
                             <NavLink to="/">Home</NavLink>
                             <NavLink to="/about" className={styles.about} >About</NavLink>
-                            <NavLink to="/create" className={styles.createPost} >New Post</NavLink>
+                            <NavLink to="/create" className={styles.createPost} >Pubblica</NavLink>
                             <select className={styles.languageSelector} name="selectedLanguage" onChange={e => setSelectedLanguage(e.target.value)}>
                                 <option value="english">🇬🇧</option>
                                 <option value="español">🇪🇸</option>
