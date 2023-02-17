@@ -1,0 +1,55 @@
+.container {
+    max-width: 100vw;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10em;
+    align-items: center;
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+
+.container h2 {
+    margin-bottom: 1em;
+}
+
+
+
+.container textarea {
+
+
+    height: 70vh;
+    width: 60vw;
+    max-height: 60em;
+    max-width: 50em;
+
+}
+
+.title,
+.author,
+.language,
+.container textarea,
+button {
+    border-radius: 8px;
+
+    font-size: .9em;
+    padding: .5em;
+    margin: 1em 0;
+}
+
+.author,
+.language,
+button {
+    max-width: 30%;
+}
+
+button {
+    margin: 0 auto;
+
+}

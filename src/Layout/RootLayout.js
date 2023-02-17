@@ -10,9 +10,9 @@ export default function RootLayout() {
                     <h1>Memories of Maya</h1>
                     <div className={styles.links}>
                         <NavLink to="/">Home</NavLink>
+                        <NavLink to="/create" className={styles.about} >About</NavLink>
                         <NavLink to="/create" className={styles.createPost} >New Post</NavLink>
                     </div>
-
                 </nav>
             </header>
             <main>

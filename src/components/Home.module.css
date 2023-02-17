@@ -9,3 +9,23 @@
     margin: 5em 0 0 13em;
     width: 60vw;
 }
+
+.blogPreview {
+    width: 80%
+}
+
+.blogTitle {
+    font-size: 2.5em;
+    font-weight: 400;
+}
+
+.blogContent {
+    margin-left: -.5em;
+    letter-spacing: .1ch;
+    text-align: justify;
+    line-height: 1.5em;
+}
+
+.blogAuthor {
+    margin-bottom: 4em;
+}
