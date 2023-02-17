@@ -14,8 +14,10 @@ import Home from './components/Home';
 import Create from "./components/Create";
 import About from './components/About'
 
+
 //layout
 import RootLayout from './Layout/RootLayout'
+import NotFound from "./components/NotFound";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,7 +25,7 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="about" element={<About />} />
       <Route path="create" element={<Create />} />
-
+      <Route path="*" element={<NotFound />} />
     </Route>
   )
 );
