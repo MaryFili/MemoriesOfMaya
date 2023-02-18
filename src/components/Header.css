@@ -15,6 +15,7 @@
     display: inline;
     text-align: center;
     margin: .5em auto;
+    padding-top: .2em;
 
     /* font-family: 'Architects Daughter', cursive; */
 }
@@ -63,7 +64,7 @@ a {
     text-decoration: none;
     padding: .5em;
     margin-left: 16px;
-    color: #FFFADE;
+    color: #FFF;
     letter-spacing: .1ch;
     /* font-size: clamp(1rem, 0.7153rem + 1.6368vw, 1.2rem);*/
     font-size: 1.5rem;
@@ -89,7 +90,7 @@ a {
 .close {
     display: block;
     font-size: 2em;
-    color: #FFFADE;
+    color: #FFF;
 
 }
 
