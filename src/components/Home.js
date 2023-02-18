@@ -14,6 +14,15 @@ const Home = () => {
                     <h2 className={styles.blogTitle}>What's the reason behind this blog</h2>
                     <p className={styles.blogContent}>...coming soon</p>
                     <p className={styles.blogAuthor}>Written by mary</p>
+                    <h2 className={styles.blogTitle}>What's the reason behind this blog</h2>
+                    <p className={styles.blogContent}>...coming soon</p>
+                    <p className={styles.blogAuthor}>Written by mary</p>
+                    <h2 className={styles.blogTitle}>What's the reason behind this blog</h2>
+                    <p className={styles.blogContent}>...coming soon</p>
+                    <p className={styles.blogAuthor}>Written by mary</p>
+                    <h2 className={styles.blogTitle}>What's the reason behind this blog</h2>
+                    <p className={styles.blogContent}>...coming soon</p>
+                    <p className={styles.blogAuthor}>Written by mary</p>
                     {blogs && <BlogList blogs={blogs} />}
                     {isPending && <p>Loading...</p>}
                     {error && <p>{error}</p>}

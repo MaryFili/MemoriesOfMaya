@@ -14,7 +14,7 @@ export default function Header() {
     }
 
     return (
-        <header className='container'>
+        <header className='headerContainer'>
 
             <h1 className='blogName'>MEMORIES OF MAYA</h1>
             <div className='menuIcon'>
@@ -27,7 +27,7 @@ export default function Header() {
                         <IoClose className='close' onClick={showMenu} />
                     </div>
                     <NavLink to="/">Home</NavLink>
-                    <NavLink to="/create" className='about' >About</NavLink>
+                    <NavLink to="/about" className='about' >About</NavLink>
                     <NavLink to="/create" className='createPost' >New Post</NavLink>
                 </div>
             </nav>
