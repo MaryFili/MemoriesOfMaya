@@ -1,11 +1,12 @@
 import React from 'react'
 import styles from '../components/Navbar.module.css'
 import { NavLink, Outlet } from 'react-router-dom'
+import Header from '../components/Header'
 
 export default function RootLayout() {
     return (
         <div className={styles.rootLayout}>
-            <header className={styles.container}>
+            {/* <header className={styles.container}>
                 <nav className={styles.navbar}>
                     <h1>Memories of Maya</h1>
                     <div className={styles.links}>
@@ -15,9 +16,9 @@ export default function RootLayout() {
                     </div>
                 </nav>
                 <div className={styles.border}>
-
                 </div>
-            </header>
+            </header> */}
+            <Header />
             <main>
                 <Outlet />
             </main>
