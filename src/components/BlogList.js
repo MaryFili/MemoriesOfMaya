@@ -1,4 +1,5 @@
-import styles from './Bloglist.module.css'
+// import styles from './Bloglist.module.css'
+import styles from './Home.module.css'
 
 const BlogList = ({ blogs }) => {
     return (
