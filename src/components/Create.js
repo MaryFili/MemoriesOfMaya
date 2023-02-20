@@ -13,20 +13,22 @@ const Create = () => {
     const [language, setLanguage] = useState('en');
     const [isPending, setIsPending] = useState(false);
     const history = useNavigate();
-
     const date = new Date().toLocaleDateString('de-DE') + "";
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const blog = { title, body, author, language, date }
-
 
         setIsPending(true);
 
-        fetch('http://localhost:8000/blogs', {
-            method: 'POST',
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(blog)
+        const ref = collection(db, 'Blogs')
+
+        addDoc(ref, {
+            title: title,
+            body: body,
+            author: author,
+            language: language,
+            date: date
+
         }).then(() => {
             setIsPending(false);
             history('/')
@@ -76,8 +78,6 @@ const Create = () => {
                     <option value="it">Italian</option>
                     <option value="es">Spanish</option>
                 </select>
-
-
                 {!isPending && <button>Add Post</button>}
                 {isPending && <button disabled>Adding Post...</button>}
             </form>
