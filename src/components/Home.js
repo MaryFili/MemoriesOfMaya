@@ -1,31 +1,21 @@
 import styles from './Home.module.css'
 import BlogList from './BlogList';
-import useFetch from './useFetch';
+import FirstPost from './FirstPost';
+import { useCollection } from '../hooks/useCollection'
 
 
 const Home = () => {
-    const { resources: blogs, isPending, error } = useFetch(' http://localhost:8000/blogs')
+    const { documents: blogs } = useCollection('Blogs')
 
     return (
 
         <div className={styles.content}>
             <div className={styles.home}>
                 <div className={styles.blogPreview}>
-                    <h2 className={styles.blogTitle}>What's the reason behind this blog</h2>
-                    <p className={styles.blogContent}>...coming soon</p>
-                    <p className={styles.blogAuthor}>Written by mary</p>
-                    <h2 className={styles.blogTitle}>What's the reason behind this blog</h2>
-                    <p className={styles.blogContent}>...coming soon</p>
-                    <p className={styles.blogAuthor}>Written by mary</p>
-                    <h2 className={styles.blogTitle}>What's the reason behind this blog</h2>
-                    <p className={styles.blogContent}>...coming soon</p>
-                    <p className={styles.blogAuthor}>Written by mary</p>
-                    <h2 className={styles.blogTitle}>What's the reason behind this blog</h2>
-                    <p className={styles.blogContent}>...coming soon</p>
-                    <p className={styles.blogAuthor}>Written by mary</p>
+                    <FirstPost />
                     {blogs && <BlogList blogs={blogs} />}
-                    {isPending && <p>Loading...</p>}
-                    {error && <p>{error}</p>}
+                    {/* {isPending && <p>Loading...</p>}
+                    {error && <p>{error}</p>} */}
                 </div>
 
             </div>

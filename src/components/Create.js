@@ -2,6 +2,10 @@ import styles from './Create.module.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+//firebase imports
+import { db } from '../firebase/config'
+import { collection, addDoc } from 'firebase/firestore'
+
 const Create = () => {
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
@@ -10,9 +14,11 @@ const Create = () => {
     const [isPending, setIsPending] = useState(false);
     const history = useNavigate();
 
+    const date = new Date().toLocaleDateString('de-DE') + "";
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        const blog = { title, body, author, language }
+        const blog = { title, body, author, language, date }
 
 
         setIsPending(true);
@@ -26,6 +32,7 @@ const Create = () => {
             history('/')
         })
     }
+
 
 
     return (
@@ -57,7 +64,9 @@ const Create = () => {
                     value={author}
                     onChange={(e) => { setAuthor(e.target.value) }}
                 />
+
                 <label>Choose Language</label>
+
                 <select
                     className={styles.language}
                     value={language}
@@ -67,6 +76,8 @@ const Create = () => {
                     <option value="it">Italian</option>
                     <option value="es">Spanish</option>
                 </select>
+
+
                 {!isPending && <button>Add Post</button>}
                 {isPending && <button disabled>Adding Post...</button>}
             </form>

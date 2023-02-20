@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import styles from './Header.css'
+import './Header.css'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { IoClose } from "react-icons/io5"
 

@@ -8,7 +8,6 @@
 .home {
     /* margin: 5em 0 0 13em; */
     width: 100vw;
-
     margin-top: 200px;
     display: flex;
     flex-direction: column;
@@ -18,7 +17,7 @@
 }
 
 .blogPreview {
-    width: 80%;
+    width: 100%;
 
 }
 
@@ -37,6 +36,14 @@
 
 .blogAuthor {
     margin-bottom: 4em;
+    /* display: inline; */
+
+}
+
+.date {
+    margin-top: .5rem;
+    font-size: .9rem;
+    display: inline;
 }
 
 
