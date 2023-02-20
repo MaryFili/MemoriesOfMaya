@@ -17,7 +17,6 @@ const Home = () => {
                     {/* {isPending && <p>Loading...</p>}
                     {error && <p>{error}</p>} */}
                 </div>
-
             </div>
         </div>
     );
