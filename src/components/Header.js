@@ -17,10 +17,11 @@ export default function Header() {
         <header className='headerContainer'>
 
             <h1 className='blogName'>MEMORIES OF MAYA</h1>
+
             <div className='menuIcon'>
                 <RxHamburgerMenu className='menu' onClick={showMenu} />
-
             </div>
+
             <nav className={active ? 'navbar active' : 'navbar'}>
                 <div className='links'>
                     <div className='closed'>
@@ -31,6 +32,7 @@ export default function Header() {
                     <NavLink to="/create" className='createPost' >New Post</NavLink>
                 </div>
             </nav>
+
             <div className='border'>
             </div>
         </header>

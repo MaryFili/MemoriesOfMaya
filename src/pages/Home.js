@@ -1,6 +1,6 @@
 import styles from './Home.module.css'
-import BlogList from './BlogList';
-import FirstPost from './FirstPost';
+import BlogList from '../components/BlogList';
+import FirstPost from '../components/FirstPost';
 import { useCollection } from '../hooks/useCollection'
 
 

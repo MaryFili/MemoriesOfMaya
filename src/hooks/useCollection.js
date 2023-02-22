@@ -19,7 +19,9 @@ export const useCollection = (c) => {
         });
         return () => unsub()//this is the cleanup function so that we unsubscribe from this real-time data when the component umount
 
-    }, [c])//we pass the collection as a dependency, so if the collection get updated, then the function will re-run
+    }, [c])//we pass the collection as a dependency, so if the collection gets updated, then the function will re-run
+
+    console.log({ documents })
 
     return { documents }
 
