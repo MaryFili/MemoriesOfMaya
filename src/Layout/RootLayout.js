@@ -8,12 +8,12 @@ export default function RootLayout() {
     return (
         <div className={styles.rootLayout}>
             <Header />
-            <main>
-                <Outlet />
-                <Sidebar />
+            <div className={styles.mainDisplay}>
+                <main>
+                    <Outlet />
+                </main>
 
-            </main>
-
+            </div>
         </div>
     )
 }

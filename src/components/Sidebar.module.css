@@ -1,0 +1,11 @@
+aside {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    /* height: 100vh; */
+    text-align: right;
+    /* z-index: 999; */
+    /* background-color: red; */
+    align-items: right;
+
+}

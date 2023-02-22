@@ -45,20 +45,20 @@ const Home = () => {
     const { blogs, loading } = useBlogs(language);
 
     return (
-        <main>
-            <div className={styles.content}>
-                <div className={styles.home}>
 
-                    <FirstPost />
-                    {loading ? (
-                        <p>Loading...</p>
-                    ) : (
-                        <BlogList blogs={blogs} />
-                    )}
+        <div className={styles.content}>
+            <div className={styles.home}>
 
-                </div>
+                <FirstPost />
+                {loading ? (
+                    <p>Loading...</p>
+                ) : (
+                    <BlogList blogs={blogs} />
+                )}
+
             </div>
-        </main>
+        </div>
+
     );
 };
 

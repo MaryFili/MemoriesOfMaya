@@ -63,11 +63,11 @@
 a {
     text-decoration: none;
     padding: .5em;
-    margin-left: 16px;
+    /* margin-left: 16px; */
     color: #FFF;
-    letter-spacing: .1ch;
+    /* letter-spacing: .1ch; */
     /* font-size: clamp(1rem, 0.7153rem + 1.6368vw, 1.2rem);*/
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-block: 2.5rem;
 }
 
@@ -148,8 +148,12 @@ a {
 
 
     .links {
-        display: inline;
+
+        display: flex;
+        flex-direction: row;
         margin-left: auto;
+        gap: 5em;
+        text-align: center;
     }
 
 }

@@ -1,0 +1,9 @@
+.languageSelector {
+    font-size: 1em;
+    /* height: 40px;
+    width: 60px; */
+    margin: 2em;
+    padding: .3em;
+    background-color: hsl(272, 55%, 12%);
+    border-radius: 8px;
+}
