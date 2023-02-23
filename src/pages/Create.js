@@ -114,6 +114,18 @@ const Create = () => {
         const selectedFile = e.target.files[0];
         if (selectedFile) {
             setFile(selectedFile);
+
+            // Upload the file to Firebase Storage and get the download URL
+            const fileRef = ref(storage, `images/${selectedFile.name}`);
+            uploadBytes(fileRef, selectedFile).then(() => {
+                getDownloadURL(fileRef).then((url) => {
+                    setFileUrl(url);
+                }).catch((error) => {
+                    console.error(error);
+                });
+            }).catch((error) => {
+                console.error(error);
+            });
         }
     };
 
@@ -121,13 +133,6 @@ const Create = () => {
         e.preventDefault();
         setIsPending(true);
 
-        // Upload the file to Firebase Storage if a file was selected
-        if (file) {
-            const fileRef = ref(storage, `images/${file.name}`);
-            await uploadBytes(fileRef, file);
-            const url = await getDownloadURL(fileRef);
-            setFileUrl(url);
-        }
 
         const blogRef = collection(db, 'Blogs');
         await addDoc(blogRef, {
