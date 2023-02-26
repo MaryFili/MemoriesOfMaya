@@ -92,23 +92,26 @@
 
 ///with image upload
 import styles from './Create.module.css';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { collection, addDoc } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { db, storage } from '../firebase/config';
-
+import LanguageContext from '../context/LanguageContext';
+import { translations } from '../translations/translation';
 
 const Create = () => {
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
     const [author, setAuthor] = useState('');
-    const [language, setLanguage] = useState('en');
+    const [postLanguage, setPostLanguage] = useState('en');
     const [isPending, setIsPending] = useState(false);
     const [file, setFile] = useState(null);
     const [fileUrl, setFileUrl] = useState(null);
     const navigate = useNavigate();
     const date = new Date().toLocaleDateString('de-DE') + '';
+    const [language] = useContext(LanguageContext);
+
 
     const handleFileChange = (e) => {
         const selectedFile = e.target.files[0];
@@ -150,20 +153,20 @@ const Create = () => {
 
     return (
         <div className={styles.container}>
-            <h2>Add a New Post</h2>
+            <h2>{translations.addPost[language]}</h2>
             <form onSubmit={handleSubmit}>
                 <input
                     className={styles.title}
                     type="text"
                     required
-                    placeholder="Title"
+                    placeholder={translations.postTitle[language]}
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                 />
 
                 <textarea
                     required
-                    placeholder="Write your post here"
+                    placeholder={translations.writePost[language]}
                     value={body}
                     onChange={(e) => setBody(e.target.value)}
                 ></textarea>
@@ -172,28 +175,28 @@ const Create = () => {
                     className={styles.author}
                     type="text"
                     required
-                    placeholder="Author"
+                    placeholder={translations.postAuthor[language]}
                     value={author}
                     onChange={(e) => setAuthor(e.target.value)}
                 />
 
-                <label>Choose Language</label>
+                <label>{translations.selectLanguage[language]}</label>
 
                 <select
                     className={styles.language}
-                    value={language}
-                    onChange={(e) => setLanguage(e.target.value)}
+                    value={postLanguage}
+                    onChange={(e) => setPostLanguage(e.target.value)}
                 >
-                    <option value="en">English</option>
-                    <option value="it">Italian</option>
-                    <option value="es">Spanish</option>
+                    <option value="en">{translations.english[language]}</option>
+                    <option value="it">{translations.italian[language]}</option>
+                    <option value="es">{translations.spanish[language]}</option>
                 </select>
 
-                <label>Choose Image</label>
+                <label>{translations.imagine[language]}</label>
                 <input type="file" onChange={handleFileChange} />
 
-                {!isPending && <button>Add Post</button>}
-                {isPending && <button disabled>Adding Post...</button>}
+                {!isPending && <button>{translations.addPost[language]}</button>}
+                {isPending && <button disabled>{translations.addingPost[language]} + "..."</button>}
             </form>
         </div>
     );

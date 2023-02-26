@@ -7,6 +7,7 @@ import { IoClose } from "react-icons/io5"
 import LanguageContext from '../context/LanguageContext';
 import { home, newPost, about } from '../translations/translation'
 import LanguageSelector from './LanguageSelector';
+import { translations } from '../translations/translation';
 
 
 
@@ -36,9 +37,9 @@ export default function Header() {
                         <IoClose className='close' onClick={showMenu} />
                     </div>
 
-                    <NavLink to="/">{home[language]}</NavLink>
-                    <NavLink to="/about" className='about' >{about[language]}</NavLink>
-                    <NavLink to="/create" className='createPost' >{newPost[language]}</NavLink>
+                    <NavLink to="/">{translations.home[language]}</NavLink>
+                    <NavLink to="/about" className='about' >{translations.about[language]}</NavLink>
+                    <NavLink to="/create" className='createPost' >{translations.newPost[language]}</NavLink>
                     <LanguageSelector />
 
                 </div>
