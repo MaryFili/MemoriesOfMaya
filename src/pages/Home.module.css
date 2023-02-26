@@ -43,15 +43,16 @@
 
 .blogAuthor {
 
-    text-align: center;
+    margin-left: .5em;
+
     margin-bottom: 4em;
     /* display: inline; */
 
 }
 
 .date {
-    text-align: center;
-    margin-top: .5rem;
+
+    margin: .5rem;
     font-size: .9rem;
     display: inline;
 }
