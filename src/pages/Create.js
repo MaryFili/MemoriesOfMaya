@@ -101,6 +101,7 @@ import LanguageContext from '../context/LanguageContext';
 import { translations } from '../translations/translation';
 
 const Create = () => {
+
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
     const [author, setAuthor] = useState('');
@@ -111,24 +112,41 @@ const Create = () => {
     const navigate = useNavigate();
     const date = new Date().toLocaleDateString('de-DE') + '';
     const [language] = useContext(LanguageContext);
+    const [fileError, setFileError] = useState(null)
+    const [showModal, setShowModal] = useState(false)
+
 
 
     const handleFileChange = (e) => {
         const selectedFile = e.target.files[0];
         if (selectedFile) {
-            setFile(selectedFile);
+            const allowedTypes = ['image/jpeg', 'image/png', 'image/jpg'];
+            const maxSize = 3 * 1024 * 1024; // 3MB
+            if (allowedTypes.includes(selectedFile.type) && selectedFile.size <= maxSize) {
+                setFile(selectedFile);
+                setFileError(null);
+                // Upload the file to Firebase Storage and get the download URL
+                const fileRef = ref(storage, `images/${selectedFile.name}`);
+                uploadBytes(fileRef, selectedFile)
+                    .then(() => {
+                        getDownloadURL(fileRef)
+                            .then((url) => {
+                                setFileUrl(url);
+                            })
+                            .catch((error) => {
+                                console.error(error);
+                            });
+                    })
+                    .catch((error) => {
+                        console.error(error);
+                    });
+            } else {
+                setFileError('Please choose a PNG or JPEG image file that is no larger than 3MB');
+                alert('Please choose a PNG or JPEG image file that is no larger than 3MB')
+                setShowModal(true);
+                setFile(null);
 
-            // Upload the file to Firebase Storage and get the download URL
-            const fileRef = ref(storage, `images/${selectedFile.name}`);
-            uploadBytes(fileRef, selectedFile).then(() => {
-                getDownloadURL(fileRef).then((url) => {
-                    setFileUrl(url);
-                }).catch((error) => {
-                    console.error(error);
-                });
-            }).catch((error) => {
-                console.error(error);
-            });
+            }
         }
     };
 
@@ -198,6 +216,11 @@ const Create = () => {
                 {!isPending && <button>{translations.addPost[language]}</button>}
                 {isPending && <button disabled>{translations.addingPost[language]} + "..."</button>}
             </form>
+            {showModal && (
+                <div className={styles.modal}>
+                    <p>{fileError}</p>
+                    <button onClick={() => setShowModal(false)}>Close</button>
+                </div>)}
         </div>
     );
 };
