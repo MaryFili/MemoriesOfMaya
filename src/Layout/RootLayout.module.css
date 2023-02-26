@@ -15,6 +15,7 @@
     height: 120px;
 }
 
+
 .navbar {
 
     padding: 1.5em;
@@ -28,18 +29,18 @@
     /* background-color: #064663; */
     /* background-color: #033146; */
 
-    /* background-color: #041C32; */
+    background-color: #041C32;
 
 }
 
-main {
+/* main {
     width: 80vw
-}
+} */
 
-.mainDisplay {
+/* .mainDisplay {
     display: flex;
     margin-top: 145px
-}
+} */
 
 .links {
     margin-left: auto;

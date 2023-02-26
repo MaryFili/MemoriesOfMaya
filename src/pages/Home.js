@@ -46,14 +46,14 @@ const Home = () => {
 
     return (
 
-        <div className={styles.content}>
+        <main className={styles.content}>
             <div className={styles.home}>
                 <FirstPost />
                 {loading
                     ? (<p>Loading...</p>)
                     : (<BlogList blogs={blogs} />)}
             </div>
-        </div>
+        </main>
 
     );
 };

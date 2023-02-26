@@ -31,7 +31,10 @@ const BlogList = ({ blogs }) => {
             {blogs.map(blog => (
                 <div className={styles.blogPreview} key={blog.id}>
                     <h2 className={styles.blogTitle}>{blog.title}</h2>
-                    <p className={styles.date}>📅: {blog.date}</p>
+                    <div className={styles.dateNameWrapper}>
+                        <h4 className={styles.date}>📅: {blog.date}</h4>
+                        <h4 className={styles.blogAuthor}>Written by {blog.author}</h4>
+                    </div>
                     {blog.image && (
                         <img
                             className={styles.blogImage}
@@ -41,7 +44,6 @@ const BlogList = ({ blogs }) => {
                     )}
                     <p className={styles.blogContent}>{blog.body.substring(0, 150)}...</p>
                     <NavLink to={`/posts/${blog.id}`}>Read More</NavLink>
-                    <p className={styles.blogAuthor}>Written by {blog.author}</p>
                 </div>
             ))}
         </div>

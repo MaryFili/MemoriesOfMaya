@@ -26,18 +26,21 @@ const Posts = () => {
         <div>   {error && <p> {error}</p>}
 
             {post && (
-                <div className={styles.mainPostContainer}>
+                <main className={styles.mainPostContainer}>
 
                     <div className={styles.postContainer} key={post.id}>
                         <h2 className={styles.blogTitle}>{post.title}</h2>
-                        <p className={styles.date}>{post.date}</p>
+                        <div className={styles.nameAndDate}>
+                            <h4 className={styles.date}>📅 {post.date}</h4>
+                            <h4 className={styles.blogAuthor}>Written by {post.author}</h4>
+                        </div>
                         {post.image && <img className={styles.blogImage} src={post.image} alt="Blog post" />}
                         <p className={styles.blogContent}>{post.body}</p>
-                        <p className={styles.blogAuthor}>Written by {post.author}</p>
                     </div>
-                </div>
-            )}
-        </div>
+                </main>
+            )
+            }
+        </div >
     );
 };
 

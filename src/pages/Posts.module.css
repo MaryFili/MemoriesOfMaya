@@ -1,0 +1,25 @@
+.mainPostContainer {
+    width: 100vw;
+}
+
+.postContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.blogImage {
+    width: 60vw;
+    margin: auto
+}
+
+.nameAndDate {
+    display: flex;
+    gap: 2em;
+}
+
+.date {
+    text-align: start;
+}
