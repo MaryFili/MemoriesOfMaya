@@ -14,6 +14,9 @@ export default function RootLayout() {
                         <NavLink to="/create" className={styles.createPost} >New Post</NavLink>
                     </div>
                 </nav>
+                <div className={styles.border}>
+
+                </div>
             </header>
             <main>
                 <Outlet />
