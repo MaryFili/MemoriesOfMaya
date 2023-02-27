@@ -13,7 +13,8 @@ import { useState } from "react";
 //pages
 import Home from './pages/Home';
 import Create from "./pages/Create";
-import About from './pages/About'
+import About from './pages/About';
+// import Posts from '.pages/Posts';
 import NotFound from "./components/NotFound";
 
 
@@ -23,6 +24,7 @@ import LanguageContext from "./context/LanguageContext";
 
 //layout
 import RootLayout from './Layout/RootLayout'
+import Posts from "./pages/Posts";
 
 
 
@@ -32,6 +34,8 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="about" element={<About />} />
       <Route path="create" element={<Create />} />
+      {/* <Route path="posts/:id" element={<Posts />} /> */}
+      <Route path="posts/:blogId" element={<Posts />} />
       <Route path="*" element={<NotFound />} />
     </Route>
   )

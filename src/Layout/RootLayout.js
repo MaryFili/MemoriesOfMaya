@@ -1,8 +1,9 @@
 import React from 'react'
-import styles from '../components/Navbar.module.css'
+
 import { Outlet } from 'react-router-dom'
 import Header from '../components/Header'
-import Sidebar from '../components/Sidebar'
+import Sidebar from '../components/Sidebar';
+import styles from './RootLayout.module.css'
 
 export default function RootLayout() {
     return (

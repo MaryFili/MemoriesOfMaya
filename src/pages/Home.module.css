@@ -20,13 +20,16 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 
 
 }
 
 .blogTitle {
+    margin-left: .5em;
+
     text-align: center;
-    font-size: clamp(2rem, 0.7153rem + 1.6368vw, 2.5rem);
+    font-size: clamp(2rem, 0.9153rem + 1.6368vw, 2.5rem);
     /* font-size: 2.5em; */
     font-weight: 400;
 }
@@ -41,27 +44,23 @@
 
 }
 
-.blogAuthor {
-
-    text-align: center;
-    margin-bottom: 4em;
-    /* display: inline; */
+.dateNameWrapper {
+    display: flex;
+    gap: 2em;
+    padding: 1em;
 
 }
 
-.date {
-    text-align: center;
-    margin-top: .5rem;
-    font-size: .9rem;
-    display: inline;
-}
+
+
 
 .blogImage {
-    width: 90%;
+    width: 95%;
     max-width: 700px;
     height: auto;
-    margin: .5em;
+    /* margin: .5em */
     padding: 1em;
+    margin: auto;
 }
 
 @media screen and (min-width: 950px) {

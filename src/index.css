@@ -1,5 +1,10 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Architects+Daughter&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 html {
   height: 100%
@@ -34,18 +39,18 @@ body {
 } */
 
 h2 {
-  font-size: clamp(1.4rem, 0.7153rem + 1.6368vw, 1.8rem);
+  font-size: clamp(1.8rem, 1.9153rem + 1.6368vw, 2.6rem);
 
 }
 
 p {
-  width: 90%;
+  /* width: 90%; */
   padding: .6em;
   font-size: 1.2em;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+h4 {
+  font-size: clamp(.4rem, 0.3153rem + 1.6368vw, 1rem);
+  /* font-size: .4em; */
+  font-weight: 300;
 }
