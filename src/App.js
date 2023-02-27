@@ -2,22 +2,29 @@
 import {
   createBrowserRouter,
   createRoutesFromElements,
+  Outlet,
   Route,
   RouterProvider,
 } from "react-router-dom";
+import { useState } from "react";
 
 
 
 //pages
-
 import Home from './pages/Home';
 import Create from "./pages/Create";
 import About from './pages/About'
+import NotFound from "./components/NotFound";
+
+
+//context
+import LanguageContext from "./context/LanguageContext";
 
 
 //layout
 import RootLayout from './Layout/RootLayout'
-import NotFound from "./components/NotFound";
+
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -33,12 +40,16 @@ const router = createBrowserRouter(
 
 
 function App() {
+  const [language, setLanguage] = useState('en')
+
 
 
   return (
-
-    <RouterProvider router={router} />
-
+    <LanguageContext.Provider value={[language, setLanguage]} >
+      <RouterProvider router={router}>
+        <Outlet />
+      </RouterProvider>
+    </LanguageContext.Provider>
 
   );
 }
