@@ -55,7 +55,6 @@ const Home = () => {
                 ) : (
                     <BlogList blogs={blogs} />
                 )}
-
             </div>
         </div>
 
