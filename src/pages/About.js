@@ -11,7 +11,7 @@ const About = () => {
                 <div className={styles.blogPreview}>
                     <h2 className={styles.blogTitle}>What's the reason behind this blog</h2>
                     <p className={styles.blogContent}>...coming soon</p>
-                    <p className={styles.blogAuthor}>Written by mary</p>
+
 
                 </div>
 

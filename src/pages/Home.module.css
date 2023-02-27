@@ -8,7 +8,6 @@
 .home {
     /* margin: 5em 0 0 13em; */
     width: 100vw;
-
     margin-top: 200px;
     display: flex;
     flex-direction: column;
@@ -18,17 +17,22 @@
 }
 
 .blogPreview {
-    width: 80%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+
 
 }
 
 .blogTitle {
+    text-align: center;
     font-size: clamp(2rem, 0.7153rem + 1.6368vw, 2.5rem);
     /* font-size: 2.5em; */
     font-weight: 400;
 }
 
 .blogContent {
+
     margin-left: -.5em;
     /* letter-spacing: .1ch; */
     text-align: start;
@@ -36,7 +40,18 @@
 }
 
 .blogAuthor {
+
+    text-align: center;
     margin-bottom: 4em;
+    /* display: inline; */
+
+}
+
+.date {
+
+    margin-top: .5rem;
+    font-size: .9rem;
+    display: inline;
 }
 
 

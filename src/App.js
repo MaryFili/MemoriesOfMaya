@@ -6,13 +6,13 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import styles from './App.module.css';
+
 
 //pages
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import Create from "./components/Create";
-import About from './components/About'
+
+import Home from './pages/Home';
+import Create from "./pages/Create";
+import About from './pages/About'
 
 
 //layout
@@ -33,7 +33,7 @@ const router = createBrowserRouter(
 
 
 function App() {
-  // const title = 'A blog tribute to an amazing friend';
+
 
   return (
 

@@ -2,6 +2,10 @@ import styles from './Create.module.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+//firebase imports
+import { db } from '../firebase/config'
+import { collection, addDoc } from 'firebase/firestore'
+
 const Create = () => {
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
@@ -9,23 +13,28 @@ const Create = () => {
     const [language, setLanguage] = useState('en');
     const [isPending, setIsPending] = useState(false);
     const history = useNavigate();
+    const date = new Date().toLocaleDateString('de-DE') + "";
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const blog = { title, body, author, language }
-
 
         setIsPending(true);
 
-        fetch('http://localhost:8000/blogs', {
-            method: 'POST',
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(blog)
+        const ref = collection(db, 'Blogs')
+
+        addDoc(ref, {
+            title: title,
+            body: body,
+            author: author,
+            language: language,
+            date: date
+
         }).then(() => {
             setIsPending(false);
             history('/')
         })
     }
+
 
 
     return (
@@ -57,7 +66,9 @@ const Create = () => {
                     value={author}
                     onChange={(e) => { setAuthor(e.target.value) }}
                 />
+
                 <label>Choose Language</label>
+
                 <select
                     className={styles.language}
                     value={language}

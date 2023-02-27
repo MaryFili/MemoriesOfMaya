@@ -23,11 +23,16 @@
 
 
 .container textarea {
+    font-family: Quicksand;
+
     height: 70vh;
     width: 60vw;
     max-height: 60em;
     max-width: 50em;
 }
+
+
+
 
 .title,
 .author,
@@ -50,4 +55,14 @@ button {
 button {
     margin: 0 auto;
 
+}
+
+
+
+.fileSelector {
+    border-radius: 8px;
+    max-width: 30%;
+    font-size: .9em;
+    padding: .5em;
+    margin: 1em 0;
 }
