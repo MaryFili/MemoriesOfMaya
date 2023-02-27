@@ -73,12 +73,14 @@
     }
 
     .blogTitle {
+        margin-left: .5em;
+
         text-align: left;
 
     }
 
     .blogContent {
-        margin-left: -.5em;
+        margin-left: .5em;
         letter-spacing: .1ch;
         text-align: justify;
         line-height: 1.5em;
