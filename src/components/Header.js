@@ -5,7 +5,8 @@ import './Header.css'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { IoClose } from "react-icons/io5"
 import LanguageContext from '../context/LanguageContext';
-
+import logo from '../images/PawsLogo.png'
+import walkingLogo from '../images/walkingPaws.png'
 import LanguageSelector from './LanguageSelector';
 import { translations } from '../translations/translation';
 
@@ -25,7 +26,10 @@ export default function Header() {
     return (
         <header className='headerContainer'>
             <div className="topWrapper">
+
+
                 <h1 className='blogName'>MEMORIES OF MAYA</h1>
+
 
                 <div className='menuIcon'>
                     <RxHamburgerMenu className='menu' onClick={showMenu} />
