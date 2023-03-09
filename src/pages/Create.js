@@ -216,11 +216,11 @@ const Create = () => {
                 {!isPending && <button>{translations.addPost[language]}</button>}
                 {isPending && <button disabled>{translations.addingPost[language]} + "..."</button>}
             </form>
-            {showModal && (
+            {/* {showModal && (
                 <div className={styles.modal}>
                     <p>{fileError}</p>
                     <button onClick={() => setShowModal(false)}>Close</button>
-                </div>)}
+                </div>)} */}
         </div>
     );
 };

@@ -54,7 +54,8 @@
 
 
 
-.blogImage {
+.blogImage,
+.blogFirstImage {
     width: 95%;
     max-width: 700px;
     height: auto;
@@ -85,5 +86,13 @@
         line-height: 1.5em;
     }
 
+    .blogFirstImage {
+        width: 95%;
+        max-width: 900px;
+        height: auto;
+        /* margin: .5em */
+        padding: 1em;
+        margin: auto;
+    }
 
 }
