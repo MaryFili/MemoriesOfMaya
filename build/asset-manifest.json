@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.96260627.css",
-    "main.js": "/static/js/main.0ef43979.js",
+    "main.css": "/static/css/main.7fbfe41d.css",
+    "main.js": "/static/js/main.0964cabb.js",
     "static/media/mayaandme.JPG": "/static/media/mayaandme.eb100b3e635e9075f089.JPG",
     "static/media/maya1.jpg": "/static/media/maya1.58d1d1054c99338d22aa.jpg",
     "index.html": "/index.html",
-    "main.96260627.css.map": "/static/css/main.96260627.css.map",
-    "main.0ef43979.js.map": "/static/js/main.0ef43979.js.map"
+    "main.7fbfe41d.css.map": "/static/css/main.7fbfe41d.css.map",
+    "main.0964cabb.js.map": "/static/js/main.0964cabb.js.map"
   },
   "entrypoints": [
-    "static/css/main.96260627.css",
-    "static/js/main.0ef43979.js"
+    "static/css/main.7fbfe41d.css",
+    "static/js/main.0964cabb.js"
   ]
 }
