@@ -40,7 +40,7 @@ export default function Header() {
                     <NavLink to="/" onClick={showMenu}>{translations.home[language]}</NavLink>
                     <NavLink to="/about" className='about' onClick={showMenu}>{translations.about[language]}</NavLink>
                     <NavLink to="/create" className='createPost' onClick={showMenu}>{translations.newPost[language]}</NavLink>
-                    <LanguageSelector />
+                    <LanguageSelector showMenu={showMenu} />
 
                 </div>
             </nav>
