@@ -148,7 +148,7 @@ a {
         width: 30%;
         margin: 0 auto;
         border-bottom: 1px solid #f2f2f2;
-        margin-top: 2px;
+        /* margin-top: 2px; */
         top: 0;
         height: 15%;
 
@@ -166,6 +166,7 @@ a {
         margin-left: auto;
         gap: 5em;
         text-align: center;
+        margin-top: 0;
     }
 
 }
