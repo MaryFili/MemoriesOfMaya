@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import styles from './Home.module.css';
 import { translations } from '../translations/translation';
 import LanguageContext from '../context/LanguageContext';
+import pic from '../images/mayaandme.JPG'
 
 
 const About = () => {
@@ -18,7 +19,7 @@ const About = () => {
                     <p className={styles.blogContent}>{translations.aboutParragraph2[language]}</p>
                     <p className={styles.blogContent}>{translations.aboutParragraph3[language]}</p>
 
-
+                    <img className={styles.blogFirstImage} src={pic} alt="portrait of maya and me" />
 
 
                 </div>

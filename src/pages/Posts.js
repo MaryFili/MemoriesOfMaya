@@ -29,6 +29,7 @@ const Posts = () => {
                 <main className={styles.mainPostContainer}>
 
                     <div className={styles.postContainer} key={post.id}>
+
                         <h2 className={styles.blogTitle}>{post.title}</h2>
                         <div className={styles.nameAndDate}>
                             <h4 className={styles.date}>📅 {post.date}</h4>

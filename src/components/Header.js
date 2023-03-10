@@ -37,9 +37,9 @@ export default function Header() {
                         <IoClose className='close' onClick={showMenu} />
                     </div>
 
-                    <NavLink to="/">{translations.home[language]}</NavLink>
-                    <NavLink to="/about" className='about' >{translations.about[language]}</NavLink>
-                    <NavLink to="/create" className='createPost' >{translations.newPost[language]}</NavLink>
+                    <NavLink to="/" onClick={showMenu}>{translations.home[language]}</NavLink>
+                    <NavLink to="/about" className='about' onClick={showMenu}>{translations.about[language]}</NavLink>
+                    <NavLink to="/create" className='createPost' onClick={showMenu}>{translations.newPost[language]}</NavLink>
                     <LanguageSelector />
 
                 </div>

@@ -1,8 +1,14 @@
 .mainPostContainer {
+    margin-top: 300px;
     width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .postContainer {
+    /* width: 80vh; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,8 +17,12 @@
 }
 
 .blogImage {
-    width: 60vw;
-    margin: auto
+    width: 95%;
+    max-width: 500px;
+    max-height: auto;
+    /* margin: .5em */
+    padding: 1em;
+    margin: auto;
 }
 
 .nameAndDate {
@@ -22,4 +32,24 @@
 
 .date {
     text-align: start;
+}
+
+.blogTitle {
+    margin-left: .5em;
+
+    text-align: center;
+    font-size: clamp(2rem, 0.9153rem + 1.6368vw, 2.5rem);
+    /* font-size: 2.5em; */
+    font-weight: 400;
+}
+
+.blogContent {
+    width: 90vh;
+
+    margin-left: .5em;
+    /* letter-spacing: .1ch; */
+    text-align: start;
+    line-height: 1.5em;
+
+
 }

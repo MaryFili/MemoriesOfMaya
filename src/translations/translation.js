@@ -108,7 +108,7 @@ const translations = {
 
         es: "PD: Desde luego, todes sabemos que ella habría odiado por completo todo esto 😅.",
 
-        it: "PS: Ovviamente sappiamo tutti che lei avrebbe odiato moltissimo tutto questo 😅"
+        it: "PS: Ovviamente sappiamo tuttə che lei avrebbe odiato moltissimo tutto questo 😅"
     },
     aboutTitle: {
         en: "Something about me",
@@ -117,16 +117,16 @@ const translations = {
     },
 
     aboutParragraph1: {
-        en: "My name is Mary and nine months ago I lost my best friend to a terrible illness. Eight months ago, I started a web development course that helped me keep my mind occupied and avoid falling into depression. Now, after 8 months of hard work, I am finally able to create a website, although I know there is still much to improve and there are probably many imperfections to experienced eyes. ",
+        en: "My name is Mary and Maya was my friend, my chosen family. Unfortunately nine months ago she passed due to a terrible illness. Eight months ago, I started a web development course that helped me keep my mind occupied and avoid falling into depression. Now, after 8 months of hard work, I am finally able to create a website, although I know there is still much to improve and there are probably many imperfections to experienced eyes. ",
 
-        es: "Me llamo Mary y hace nueve meses perdí a mi mejor amiga a causa de una terrible enfermedad. Hace ocho meses empecé un curso de desarrollo web que me ayudó a mantener la mente ocupada y evitar caer en la depresión. Ahora, tras 8 meses de duro trabajo, por fin puedo crear un sitio web, aunque sé que aún hay mucho que mejorar y que probablemente haya muchas imperfecciones para ojos expertos. ",
+        es: "Me llamo Mary y Maya era mi mejor amiga, mi familia elegida. Lamentablemente hace nueve meses nos dejó a causa de una terrible enfermedad. Hace ocho meses empecé un curso de desarrollo web que me ayudó a mantener la mente ocupada y evitar caer en la depresión. Ahora, tras 8 meses de duro trabajo, por fin puedo crear un sitio web, aunque sé que aún hay mucho que mejorar y que probablemente haya muchas imperfecciones para ojos expertos. ",
 
-        it: "Mi chiamo Mary e nove mesi fa purtroppo ho perso la mia migliore amica a causa di una bruttissima malattia. Otto mesi fa ho iniziato un corso di sviluppo di siti web che mi ha aiutato a mantenere la mente occupata e a non cadere in depressione. Adesso, dopo 8 mesi di duro lavoro, sono finalmente in grado di creare un sito web, anche se so che ci sono ancora molte cose da migliorare e probabilmente ad occhi esperti sembrerà pieno di imperfezioni ad occhi esperti."
+        it: "Mi chiamo Mary e Maya era la mia migliore amica, la mia famiglia. Purtroppo nove mesi fa ci ha lasciato a causa di una bruttissima malattia. Otto mesi fa ho iniziato un corso di sviluppo di siti web che mi ha aiutato a mantenere la mente occupata e a non cadere in depressione. Adesso, dopo 8 mesi di duro lavoro, sono finalmente in grado di creare un sito web, anche se so che ci sono ancora molte cose da migliorare e, probabilmente, ad occhi esperti, sembrerà pieno di imperfezioni."
     },
     aboutParragraph2: {
-        en: "However, I couldn't help but dedicate my first website to her, my family, and my life partner.",
-        es: "Sin embargo, no podía no dedicarle mi primer sitio web a ella, a mi familia y a mi compañera de vida. ",
-        it: "Tuttavia, non potevo non dedicare il mio primo sito a lei, la mia famiglia e compagna di vita."
+        en: "However, I couldn't help but dedicate my first website to her, my sister and life partner.",
+        es: "Sin embargo, no podía no dedicarle mi primer sitio web a ella, hermana y a mi compañera de vida. ",
+        it: "Tuttavia, non potevo non dedicare il mio primo sito a lei, sorella e compagna di vita."
     },
     aboutParragraph3: {
         en: " To Maya, forever! 💜",

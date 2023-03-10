@@ -198,7 +198,7 @@ const Create = () => {
                     onChange={(e) => setAuthor(e.target.value)}
                 />
 
-                <label>{translations.selectLanguage[language]}</label>
+                {/* <label>{translations.selectLanguage[language]}</label>
 
                 <select
                     className={styles.language}
@@ -208,10 +208,10 @@ const Create = () => {
                     <option value="en">{translations.english[language]}</option>
                     <option value="it">{translations.italian[language]}</option>
                     <option value="es">{translations.spanish[language]}</option>
-                </select>
+                </select> */}
 
                 <label>{translations.imagine[language]}</label>
-                <input type="file" onChange={handleFileChange} />
+                <input className={styles.author} type="file" onChange={handleFileChange} />
 
                 {!isPending && <button>{translations.addPost[language]}</button>}
                 {isPending && <button disabled>{translations.addingPost[language]} + "..."</button>}
