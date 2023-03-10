@@ -49,19 +49,51 @@ button {
 .language,
 button {
     max-width: 30%;
+
+}
+
+.language,
+button {
+    max-width: 30%;
+    font-weight: 900;
 }
 
 button {
-    margin: 0 auto;
+    margin: 1em auto;
 
+}
+
+select {
+    font-family: Quicksand;
 }
 
 
 
-.fileSelector {
+input[type="file"] {
+    display: none;
+}
+
+.uploadImg {
+    font-size: .9em;
+
     border-radius: 8px;
     max-width: 30%;
-    font-size: .9em;
+    border: 1px solid #ccc;
+    display: inline-block;
+
+    cursor: pointer;
+    text-align: center;
+    background-color: #efefef;
+    color: black;
+    text-align: start;
     padding: .5em;
     margin: 1em 0;
+
+
+}
+
+.uploadImg:hover {
+    background-color: white;
+    color: black;
+    font-weight: 900;
 }

@@ -35,12 +35,14 @@
 }
 
 .blogContent {
-
+    width: 80vw;
     margin-left: .5em;
     /* letter-spacing: .1ch; */
-    text-align: start;
+    text-align: center;
     line-height: 1.2em;
-    text-align: left;
+    /* text-align: left; */
+    font-size: clamp(1rem, 0.8vw, 1.5rem);
+
 
 }
 

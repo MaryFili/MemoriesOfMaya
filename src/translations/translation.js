@@ -27,7 +27,7 @@ const translations = {
     writePost: {
         en: "Write yout post here",
         es: "Escribe aquí tu post",
-        it: "Scrivi qui il tup post"
+        it: "Scrivi qui il tuo post"
     },
 
     postAuthor: {
@@ -38,9 +38,9 @@ const translations = {
     },
 
     imagine: {
-        en: "Choose image",
-        es: "Elegir imagen",
-        it: "Scegli un'immagine"
+        en: "Choose image (3Mb Max.)",
+        es: "Elegir imagen (Max. 3Mb)",
+        it: "Scegli un'immagine (Max. 3Mb)"
     },
     addPost: {
         en: "Add Post",
