@@ -86,7 +86,7 @@ input[type="file"] {
     text-align: start;
     padding: .5em;
     margin: 1em 0;
-
+    margin-left: auto;
     width: 180px;
 
 }
@@ -95,6 +95,11 @@ input[type="file"] {
     background-color: white;
     color: black;
     font-weight: 900;
+}
+
+.buttonsContainer {
+    display: flex;
+    justify-content: flex-start;
 }
 
 @media screen and (min-width: 950px) {

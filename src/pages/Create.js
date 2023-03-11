@@ -100,7 +100,6 @@ const Create = () => {
                     value={body}
                     onChange={(e) => setBody(e.target.value)}
                 ></textarea>
-
                 <input
                     className={styles.author}
                     type="text"
@@ -109,24 +108,27 @@ const Create = () => {
                     value={author}
                     onChange={(e) => setAuthor(e.target.value)}
                 />
+                <div className={styles.buttonsContainer}>
 
-                {/* <label>{translations.selectLanguage[language]} *</label> */}
 
-                <select
-                    className={styles.language}
-                    required
-                    value={postLanguage}
-                    onChange={(e) => setPostLanguage(e.target.value)}
-                >
-                    <option disabled selected value> {translations.selectLanguage[language]}</option>
-                    <option required value="en">{translations.english[language]}</option>
-                    <option required value="it">{translations.italian[language]}</option>
-                    <option required value="es">{translations.spanish[language]}</option>
-                </select>
+                    {/* <label>{translations.selectLanguage[language]} *</label> */}
 
-                <label className={styles.uploadImg}>{translations.imagine[language]}
-                    <input type="file" onChange={handleFileChange} />
-                </label>
+                    <select
+                        className={styles.language}
+                        required
+                        value={postLanguage}
+                        onChange={(e) => setPostLanguage(e.target.value)}
+                    >
+                        <option disabled selected value> {translations.selectLanguage[language]}</option>
+                        <option required value="en">{translations.english[language]}</option>
+                        <option required value="it">{translations.italian[language]}</option>
+                        <option required value="es">{translations.spanish[language]}</option>
+                    </select>
+
+                    <label className={styles.uploadImg}>{translations.imagine[language]}
+                        <input type="file" onChange={handleFileChange} />
+                    </label>
+                </div>
                 {!isPending && <button>{translations.addPost[language]}</button>}
                 {isPending && <button disabled>{translations.addingPost[language]} + "..."</button>}
             </form>
