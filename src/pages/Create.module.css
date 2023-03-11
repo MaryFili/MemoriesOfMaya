@@ -86,7 +86,7 @@ input[type="file"] {
     text-align: start;
     padding: .5em;
     margin: 1em 0;
-    margin-left: auto;
+    /* margin-left: auto; */
     width: 180px;
 
 }
@@ -100,12 +100,14 @@ input[type="file"] {
 .buttonsContainer {
     display: flex;
     justify-content: flex-start;
+    flex-direction: column;
 }
 
 @media screen and (min-width: 950px) {
     .uploadImg {
 
         max-width: 30%;
+        margin-left: auto;
 
 
     }
@@ -134,4 +136,10 @@ input[type="file"] {
 
     }
 
+
+
+
+    .buttonsContainer {
+        flex-direction: row;
+    }
 }
