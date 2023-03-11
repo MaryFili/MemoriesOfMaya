@@ -48,13 +48,13 @@ button {
 .author,
 .language,
 button {
-    max-width: 30%;
+    width: 180px;
 
 }
 
 .language,
 button {
-    max-width: 30%;
+
     font-weight: 900;
 }
 
@@ -77,10 +77,8 @@ input[type="file"] {
     font-size: .9em;
 
     border-radius: 8px;
-    max-width: 30%;
     border: 1px solid #ccc;
     display: inline-block;
-
     cursor: pointer;
     text-align: center;
     background-color: #efefef;
@@ -89,6 +87,7 @@ input[type="file"] {
     padding: .5em;
     margin: 1em 0;
 
+    width: 180px;
 
 }
 
@@ -96,4 +95,40 @@ input[type="file"] {
     background-color: white;
     color: black;
     font-weight: 900;
+}
+
+@media screen and (min-width: 950px) {
+    .uploadImg {
+        font-size: .9em;
+
+        border-radius: 8px;
+        max-width: 30%;
+        border: 1px solid #ccc;
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        background-color: #efefef;
+        color: black;
+        text-align: start;
+        padding: .5em;
+        margin: 1em 0;
+
+
+    }
+
+
+    .author,
+    .language,
+    button {
+        max-width: 30%;
+
+    }
+
+    .language,
+    button {
+        max-width: 30%;
+        font-weight: 900;
+    }
+
+
 }
