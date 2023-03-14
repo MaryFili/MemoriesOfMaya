@@ -8,7 +8,7 @@
 .home {
     /* margin: 5em 0 0 13em; */
     width: 100vw;
-    margin-top: 200px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -71,6 +71,8 @@
 
     .home {
         width: 50vw;
+        margin-top: 200px;
+
 
     }
 

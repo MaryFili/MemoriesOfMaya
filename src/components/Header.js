@@ -30,6 +30,7 @@ export default function Header() {
                 <div className='menuIcon'>
                     <RxHamburgerMenu className='menu' onClick={showMenu} />
                 </div>
+
             </div>
             <nav className={active ? 'navbar active' : 'navbar'}>
                 <div className='links'>

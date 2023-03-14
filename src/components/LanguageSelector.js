@@ -12,9 +12,11 @@ export default function LanguageSelector({ showMenu }) {
         <div >
             <label>
                 <select className={styles.languageSelector} value={language} onChange={(e) => setLanguage(e.target.value)} onClick={showMenu}>
+                    {/* <select className={styles.languageSelector} value={language} onChange={(e) => setLanguage(e.target.value)}> */}
+
                     <option value='en'>🇬🇧 </option>
-                    <option value='es'>🇪🇸 </option>
                     <option value='it'>🇮🇹 </option>
+                    <option value='es'>🇪🇸 </option>
                 </select>
             </label>
 
