@@ -1,2 +1,11 @@
 node_modules
-node_modules
+
+
+/build
+
+/src/firebase/
+
+.firebase/
+firestore.rules
+firestore.indexes.json
+firebase.json
